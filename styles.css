@@ -270,3 +270,35 @@ header button i {
   transform: translateX(-50%);
   background-color: var(--clr-gray-200);
 }
+
+/* Testimonies */
+.testimony-container {
+  padding-block: 2rem;
+  padding-inline: 10vw;
+}
+
+.testimonies {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.testimonies::-webkit-scrollbar {
+  display: none;
+}
+
+.testimony {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  min-width: 25rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimony p {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
