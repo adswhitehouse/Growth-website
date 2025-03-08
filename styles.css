@@ -85,7 +85,7 @@ select {
   color: var(--clr-blue-400);
 }
 
-.white { 
+.white {
   color: var(--clr-white);
 }
 
@@ -192,12 +192,52 @@ header nav img {
 
 header button {
   width: 7.5rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   border: none;
-  padding-block: 0.5rem;
+  height: 2.5rem;
   margin-left: 1rem;
 }
 
 header button i {
+  margin-right: 0.5rem;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  padding-inline: 10vw;
+  padding-block: 3rem 22%;
+}
+
+.hero-img {
+  position: absolute;
+  width: calc(80vw);
+  bottom: 2rem;
+}
+
+.hero p {
+  margin-block: 1rem;
+  width: 48%;
+}
+
+.hero a {
+  border-radius: 0.5rem;
+  text-decoration: none;
+  height: 2.5rem;
+  padding-inline: 1rem;
+  display: inline-flex;
+  align-items: center;
+  border: none;
+}
+
+.hero button {
+  height: 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding-inline: 1rem;
+}
+
+.hero button i {
   margin-right: 0.5rem;
 }
