@@ -2,6 +2,9 @@
 let faqs = document.querySelectorAll(".jsFaqPara");
 let expandFaqs = document.querySelectorAll(".fa-plus");
 let filterBtns = document.querySelectorAll(".jsFilterBtn");
+let menuBtn = document.querySelector(".jsMenuBtn");
+let headerUl = document.querySelector(".jsHeaderUl");
+let header = document.querySelector("header");
 
 // Toggles FAQ answer visibility, x icon and after pseudo color on plus icon click
 expandFaqs.forEach((expander) => {
@@ -22,3 +25,23 @@ filterBtns.forEach((btn) => {
     btn.classList.add("filter-btn-active");
   });
 });
+
+// Toggles nav visibility on menu button click
+menuBtn.addEventListener("click", () => {
+  headerUl.classList.toggle("show-nav");
+});
+
+// If browser is resized while small screen nav is open the nav resets to default large screen styling
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 820 && headerUl.classList.contains("show-nav")) {
+    headerUl.classList.remove("show-nav");
+  }
+});
+
+// If webpage is clicked while nav is open the nav closes
+document.addEventListener("click", (e) => {
+  if (!header.contains(e.target) && headerUl.classList.contains("show-nav")) {
+    headerUl.classList.remove("show-nav");
+  }
+});
+
