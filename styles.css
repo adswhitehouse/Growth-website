@@ -424,12 +424,12 @@ footer button {
   border-radius: 0.5rem;
 }
 
-.faq-filter button {
+.filter-btn {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: var(--fw-medium);
   border: none;
-  background-color: transparent;
+  background-color: var(--clr-gray-200);
   cursor: pointer;
 }
 
@@ -513,13 +513,14 @@ footer img {
 }
 
 .subscribe input {
-  border: none;
-  outline: none;
   height: 2.5rem;
   border-radius: 0.5rem;
   padding-inline: 1rem;
   min-width: 3rem;
   margin-right: 0.5rem;
+  background-color: var(--clr-gray-200);
+  border-style: solid;
+  border-color: var(--clr-gray-300);
 }
 
 .social-links {
@@ -528,8 +529,106 @@ footer img {
   bottom: 4rem;
 }
 
+.social-links a {
+  color: var(--clr-gray-300);
+  font-size: var(--fs-20);
+  margin-right: 0.5rem;
+}
+
 .copyright {
   position: absolute;
   left: 10vw;
   bottom: 2rem;
 }
+
+/* Pseudo states */
+header button,
+.hero button {
+  transition: color 0.25s, background-color 0.25s;
+}
+
+header button:hover,
+.hero button:hover {
+  background-color: var(--clr-blue-200);
+  color: var(--clr-white);
+}
+
+.hero a,
+.video a,
+.pricing a,
+.subscribe button {
+  transition: background-color 0.25s;
+}
+
+.hero a:hover,
+.video a:hover,
+.pricing a:hover,
+.subscribe button:hover {
+  background-color: #1570f9;
+}
+
+footer nav a {
+  transition: color 0.25s;
+}
+
+footer nav a:hover {
+ color: var(--clr-gray-100);
+}
+
+.social-links a{
+  transition: color 0.25s;
+}
+
+.social-links a:hover {
+  color: var(--clr-blue-200);
+}
+
+header a {
+  transition: color 0.25s;
+}
+
+header a:hover {
+  color: var(--clr-blue-200);
+}
+
+.pricing button {
+  transition: color 0.25s;
+}
+
+.pricing button:hover {
+  color: var(--clr-blue-200);
+}
+
+.pricing button i {
+  transition: transform 0.25s;
+}
+
+.pricing button:hover i {
+  transform: rotate(-90deg);
+}
+
+.subscribe input {
+  transition: border-color 0.25s;
+}
+
+.subscribe input:hover {
+  border-color: var(--clr-gray-400);
+}
+
+.subscribe input:focus {
+  outline-color: var(--clr-blue-200);
+}
+
+.filter-btn {
+  transition: color 0.25s, background-color 0.25s;
+}
+
+.filter-btn-active {
+  background-color: var(--clr-blue-200);
+  color: var(--clr-white);
+}
+
+.filter-btn:not(.filter-btn-active):hover {
+  background-color: #dbe7f9;
+}
+
