@@ -5,6 +5,7 @@ let filterBtns = document.querySelectorAll(".jsFilterBtn");
 let menuBtn = document.querySelector(".jsMenuBtn");
 let headerUl = document.querySelector(".jsHeaderUl");
 let header = document.querySelector("header");
+let heroImg = document.querySelector(".jsHeroImg");
 
 // Toggles FAQ answer visibility, x icon and after pseudo color on plus icon click
 expandFaqs.forEach((expander) => {
@@ -45,3 +46,10 @@ document.addEventListener("click", (e) => {
   }
 });
 
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 820) {
+    heroImg.src = "images/hero-bg-mobile.png.png";
+  } else {
+    heroImg.src = "images/hero-bg.png";
+  }
+});

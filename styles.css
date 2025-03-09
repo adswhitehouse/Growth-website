@@ -222,7 +222,6 @@ header nav img {
   position: relative;
   padding-inline: 10vw;
   padding-block: 3rem 23%;
-  overflow: visible;
 }
 
 .hero-img {
@@ -705,5 +704,40 @@ header a:hover {
     --fs-20: 1.125rem;
     --fs-48: 2rem;
     --fs-36: 1.75rem;
+  }
+
+  /* Hero */
+  .hero {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .hero p {
+    width: 100%;
+  }
+
+  .hero img {
+    position: static;
+  }
+
+  .hero a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 20rem;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  .hero button {
+    max-width: 20rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-img {
+    width: 100%;
+    margin-top: 2rem;
   }
 }
