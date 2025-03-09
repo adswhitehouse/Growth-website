@@ -407,7 +407,7 @@ header button i {
 }
 
 .faq h2 {
-  padding-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .faq-filter {
@@ -446,7 +446,6 @@ header button i {
   right: 2px;
   top: 4px;
   cursor: pointer;
-  visibility: hidden;
 }
 
 .faq-para {
@@ -456,5 +455,9 @@ header button i {
 }
 
 .question-active {
-  height: 100px;
+  height: 4rem;
+}
+
+.question-active-after::after {
+  background-color: #131316;
 }
