@@ -415,6 +415,7 @@ footer button {
 .question {
   padding-right: 5rem;
   position: relative;
+  padding-bottom: 1rem;
 }
 
 .faq h2 {
@@ -460,13 +461,13 @@ footer button {
 }
 
 .faq-para {
-  height: 0;
+  max-height: 0;
   overflow: hidden;
-  transition: height 0.25s;
+  transition: max-height 0.25s;
 }
 
 .question-active {
-  height: 6rem;
+  max-height: 5rem;
 }
 
 .question-active-after::after {
@@ -482,7 +483,7 @@ footer {
 .footer-main {
   display: flex;
   gap: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 6rem;
 }
 
 footer nav {
@@ -503,14 +504,15 @@ footer nav a {
 }
 
 footer img {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .subscribe {
   padding: 1rem;
   border-radius: 1rem;
-  flex-shrink: 0;
   align-self: flex-start;
+  max-width: 25rem;
+  width: 100%;
 }
 
 .subscribe p {
@@ -522,10 +524,14 @@ footer img {
   border-radius: 0.5rem;
   padding-inline: 1rem;
   min-width: 3rem;
-  margin-right: 0.5rem;
   background-color: var(--clr-gray-200);
   border-style: solid;
   border-color: var(--clr-gray-300);
+}
+
+.subscribe form {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .social-links {
@@ -739,5 +745,59 @@ header a:hover {
   .hero-img {
     width: 100%;
     margin-top: 2rem;
+  }
+
+  /* Video */
+  .video a {
+    max-width: 20rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .video h2 {
+    width: 100%;
+  }
+
+  /* Testimonies */
+  .testimony-container h2 {
+    width: 100%;
+  }
+
+  .testimonies {
+    flex-direction: column;
+    padding-right: 0;
+  }
+
+  .testimony {
+    width: 100%;
+    min-width: 10rem;
+    margin-inline: auto;
+  }
+
+  /* Pricing */
+  .price-packages {
+    flex-direction: column;
+  }
+
+  .price-packages a {
+    max-width: 20rem;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  /* FAQ */
+  .question-active {
+    max-height: 11rem;
+  }
+
+  /* Footer */
+  .footer-main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .social-links,
+  .copyright {
+    left: 5vw;
   }
 }

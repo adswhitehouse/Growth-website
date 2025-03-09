@@ -6,6 +6,7 @@ let menuBtn = document.querySelector(".jsMenuBtn");
 let headerUl = document.querySelector(".jsHeaderUl");
 let header = document.querySelector("header");
 let heroImg = document.querySelector(".jsHeroImg");
+let faqHeading = document.querySelector(".jsFaqHeading");
 
 // Toggles FAQ answer visibility, x icon and after pseudo color on plus icon click
 expandFaqs.forEach((expander) => {
@@ -46,10 +47,17 @@ document.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("resize", () => {
+// On page load and browser resize display correct content dependant on screen width
+function responsiveDesign() {
   if (window.innerWidth <= 820) {
     heroImg.src = "images/hero-bg-mobile.png.png";
+    faqHeading.textContent = "FAQ";
   } else {
     heroImg.src = "images/hero-bg.png";
+    faqHeading.textContent = "Frequently Asked Questions";
   }
+}
+window.addEventListener("resize", () => {
+  responsiveDesign();
 });
+responsiveDesign();
