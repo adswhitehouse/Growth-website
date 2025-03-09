@@ -222,7 +222,8 @@ header button i {
 
 .hero a,
 .video a,
-.pricing a {
+.pricing a,
+footer button {
   border-radius: 0.5rem;
   text-decoration: none;
   height: 2.5rem;
@@ -263,13 +264,13 @@ header button i {
 .pricing::after {
   content: "";
   position: absolute;
-  height: 1px;
+  height: 3px;
   border-radius: 5rem;
   bottom: 0;
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #494949;
+  background-color: var(--clr-gray-400);
 }
 
 /* Testimonies */
@@ -357,13 +358,13 @@ header button i {
 .price-package-premium h4::after {
   content: "";
   position: absolute;
-  height: 1px;
+  height: 3px;
   border-radius: 5rem;
   bottom: -1.75rem;
   width: 100%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #494949;
+  background-color: var(--clr-gray-400);
 }
 
 .price-package-simple i,
@@ -394,7 +395,7 @@ header button i {
 .question::after {
   content: "";
   position: absolute;
-  height: 1px;
+  height: 3px;
   border-radius: 5rem;
   bottom: 0;
   width: 100%;
@@ -430,7 +431,7 @@ header button i {
 .faq h3 {
   font-size: var(--fs-20);
   font-weight: var(--fw-normal);
-  margin-block: 1rem;
+  margin-block: 2.5rem 1rem;
 }
 
 .fa-plus {
@@ -455,9 +456,62 @@ header button i {
 }
 
 .question-active {
-  height: 4rem;
+  height: 6rem;
 }
 
 .question-active-after::after {
   background-color: #131316;
+}
+
+/* Footer */
+footer {
+  padding: 2rem 10vw;
+}
+
+.footer-main {
+  display: flex;
+  padding-bottom: 5rem;
+  gap: 5rem;
+}
+
+footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 5rem;
+}
+
+footer nav h2 {
+  color: var(--clr-gray-400);
+  font-size: var(--fs-18);
+  font-weight: var(--fw-semibold);
+}
+
+footer nav a {
+  color: var(--clr-gray-300);
+  text-decoration: none;
+}
+
+footer img {
+  margin-bottom: 1rem;
+}
+
+.subscribe {
+  padding: 1rem;
+  border-radius: 1rem;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.subscribe p {
+  margin-block: 0.75rem;
+}
+
+.subscribe input {
+  border: none;
+  outline: none;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  padding-inline: 1rem;
+  min-width: 3rem;
+  margin-right: 0.5rem;
 }
