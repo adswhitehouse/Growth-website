@@ -403,12 +403,11 @@ header button i {
 
 .question {
   padding-right: 5rem;
-  padding-bottom: 1rem;
   position: relative;
 }
 
 .faq h2 {
-  /* padding-bottom: 1rem; */
+  padding-bottom: 1rem;
 }
 
 .faq-filter {
@@ -450,10 +449,9 @@ header button i {
   visibility: hidden;
 }
 
-.question p {
+.faq-para {
   height: 0;
   overflow: hidden;
-
   transition: height 0.25s;
 }
 
